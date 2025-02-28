@@ -101,7 +101,7 @@ main section.search form {
 }
 
 main section.search form div.search {
-    min-width: 37.5rem;
+    width: 37.5rem;
     padding: 1rem;
     border: 2px solid var(--color-primary-dark);
     border-radius: 7px;
@@ -143,31 +143,32 @@ main section.search form div.search:focus-within button {
 
 
 /* main - grid-cards  */
-main .grid-cards {
-    /* background-color: palegoldenrod; */
-}
+/* main .grid-cards {
+    
+} */
 
-main .grid-cards ul {
+main .grid-cards ul.ul-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(21.25rem, 1fr));
     gap: 1rem;
 }
 
 
-main .grid-cards ul li {
-    max-width: 64rem;
+main .grid-cards ul.ul-cards li.li-cards {
+    display: flex;
+    flex-direction: column;
     background-color: var(--color-white);
     border-radius: 7px;
     transition: var(--transition-all);
 }
 
-main .grid-cards ul li:hover {
+main .grid-cards ul.ul-cards li.li-cards:hover {
     transform: scale(1.05);
     box-shadow: var(--default-box-shadow);
 }
 
 
-main .grid-cards ul li header img {
+main .grid-cards ul.ul-cards li.li-cards header img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -175,10 +176,85 @@ main .grid-cards ul li header img {
     border-top-right-radius: 7px;
 }
 
-main .grid-cards ul li header {
+main .grid-cards ul.ul-cards li.li-cards header {
     background-color: var(--color-white);
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
 }
 
+main .grid-cards ul.ul-cards li.li-cards main article {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+main .grid-cards ul.ul-cards li.li-cards main article h2 {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+main .grid-cards ul.ul-cards li.li-cards main article ul {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+main .grid-cards ul.ul-cards li.li-cards main article ul li i {
+    font-size: .8rem;
+}
+
+main .grid-cards ul.ul-cards li.li-cards main article ul li span, 
+main .grid-cards ul.ul-cards li.li-cards main article ul li a {
+    font-size: .7rem;
+    color: var(--color-dark-text);
+    transition: var(--transition-all);
+}
+
+main .grid-cards ul.ul-cards li.li-cards main article ul li a:hover {
+    color: var(--color-primary);
+}
+
+main .grid-cards ul.ul-cards li.li-cards div.duration {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    background-color: var(--color-gray-2);
+}
+
+main .grid-cards ul.ul-cards li.li-cards div.duration div.item-duration {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    align-items: center;
+}
+
+main .grid-cards ul.ul-cards li.li-cards div.duration div.item-duration div {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+}
+
+main .grid-cards ul.ul-cards li.li-cards footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem;
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+}
+
+
+
 /* main - grid-cards - end */
+
+
+/* footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+}
